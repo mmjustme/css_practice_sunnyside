@@ -1,0 +1,22 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
