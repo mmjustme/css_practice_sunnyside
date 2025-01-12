@@ -254,7 +254,7 @@ main {
     }
   }
 
-  section.projects {
+  section.testimonials {
     display: flex;
     flex-direction: column;
     row-gap: 81px;
