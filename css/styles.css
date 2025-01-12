@@ -218,6 +218,7 @@ main {
       justify-content: center;
 
       background-repeat: no-repeat;
+      background-position: center;
 
       text-align: center;
 
@@ -250,6 +251,62 @@ main {
 
       color: #3e7467;
       margin-bottom: 59px;
+    }
+  }
+
+  section.projects {
+    display: flex;
+    flex-direction: column;
+    row-gap: 81px;
+
+    padding-inline: 165px;
+    padding-block: 160px;
+    text-align: center;
+
+    h2 {
+      font-family: "Fraunces", serif;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: 5px;
+      color: #a7aaad;
+    }
+    div {
+      display: flex;
+      gap: 30px;
+
+      article {
+        letter-spacing: -0.12px;
+        font-size: 18px;
+        img {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          margin-bottom: 58px;
+        }
+        p {
+          line-height: 32px;
+          color: #5b636d;
+
+          &.name {
+            font-family: "Fraunces", serif;
+            font-weight: 900;
+            line-height: 22px;
+            color: #24303e;
+
+            margin-top: 58px;
+            margin-bottom: 9px;
+          }
+
+          &:last-child {
+            font-size: 14px;
+            line-height: 25px;
+            letter-spacing: -0.1px;
+            color: #a7aaad;
+          }
+        }
+      }
     }
   }
 }
