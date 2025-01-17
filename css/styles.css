@@ -29,6 +29,12 @@ body {
   color: #808397;
   font-size: 18px;
 }
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 .fbx {
   display: flex;
@@ -58,6 +64,18 @@ header {
   div.fbx {
     width: 100%;
     justify-content: space-between;
+  }
+
+  nav button.burger {
+    display: none;
+    width: 24px;
+    height: 18px;
+    border-block: 2px solid #fff;
+    span {
+      display: block;
+      height: 2px;
+      background-color: #fff;
+    }
   }
 
   ul.fbx {
@@ -388,13 +406,19 @@ footer {
   }
 }
 
-@media (max-width: 1165px) {
+@media (max-width: 1200px) {
+  nav ul.fbx {
+    display: none;
+  }
+
+  header nav button.burger {
+    display: block;
+  }
+
   .bg-yellow {
     order: -1;
   }
-}
 
-@media (max-width: 950px) {
   section.projects {
     div {
       flex-direction: column;
