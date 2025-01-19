@@ -418,10 +418,29 @@ footer {
 
     nav ul.fbx {
       display: none;
+
+      /* TREANGLE */
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        /* background-color: red; */
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+
+        box-sizing: border-box;
+        border: 12px solid #fffcf8;
+        border-left-color: transparent;
+        border-top-color: transparent;
+      }
     }
 
+    /* BURGER MENU */
     nav.open ul.fbx {
-      background-color: #fff;
+      background-color: #fffcf8;
       a {
         color: #808397;
 
