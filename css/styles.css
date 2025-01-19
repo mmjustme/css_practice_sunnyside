@@ -29,6 +29,12 @@ body {
   color: #808397;
   font-size: 18px;
 }
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
 .fbx {
   display: flex;
@@ -58,6 +64,21 @@ header {
   div.fbx {
     width: 100%;
     justify-content: space-between;
+  }
+
+  nav button.burger {
+    display: none;
+    width: 24px;
+    height: 18px;
+    border-block: 2px solid #fff;
+    span {
+      display: block;
+      height: 2px;
+      background-color: #fff;
+    }
+  }
+  nav.open button.burger {
+    border-block: 2px solid rgba(255, 255, 255, 0.503);
   }
 
   ul.fbx {
@@ -131,6 +152,7 @@ main {
 
     article {
       display: flex;
+      flex-wrap: wrap;
 
       .info {
         flex: 1 0 50%;
@@ -158,6 +180,7 @@ main {
         font-size: 18px;
         line-height: 30px;
         letter-spacing: -0.12px;
+        min-width: 300px;
       }
 
       a {
@@ -209,6 +232,7 @@ main {
   /* ================= SERVICES ================= */
   section.services {
     display: flex;
+    flex-wrap: wrap;
 
     article {
       min-height: 600px;
@@ -219,6 +243,7 @@ main {
 
       background-repeat: no-repeat;
       background-position: center;
+      background-size: cover;
 
       text-align: center;
 
@@ -257,6 +282,7 @@ main {
   section.testimonials {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     row-gap: 81px;
 
     padding-inline: 165px;
@@ -274,6 +300,8 @@ main {
     }
     div {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
 
       article {
@@ -291,6 +319,7 @@ main {
 
           &:nth-of-type(1) {
             max-width: 350px;
+            min-width: 200px;
           }
 
           &.name {
@@ -317,25 +346,19 @@ main {
 
 /* ================= FOOTER ================= */
 footer {
-  height: 100vh;
-
   section.projects {
-    height: 55%;
     display: flex;
-
     div {
-      flex-basis: 360px;
-    }
-
-    div img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      display: flex;
+      flex: 1 1 360px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
   section.contacts {
-    height: 45%;
     min-height: 350px;
     background-color: #90d4c6;
 
@@ -382,6 +405,106 @@ footer {
           fill: #fff;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    img {
+      width: 123px;
+      height: 24px;
+    }
+    div.fbx {
+      position: relative;
+    }
+
+    nav ul.fbx {
+      display: none;
+
+      /* TREANGLE */
+      &::after {
+        content: "";
+        width: 24px;
+        height: 24px;
+        /* background-color: red; */
+
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+
+        box-sizing: border-box;
+        border: 12px solid #fffcf8;
+        border-left-color: transparent;
+        border-top-color: transparent;
+      }
+    }
+
+    /* BURGER MENU */
+    nav.open ul.fbx {
+      background-color: #fffcf8;
+      a {
+        color: #808397;
+
+        font-size: 20px;
+        line-height: 25px;
+
+        letter-spacing: -0.14px;
+      }
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      top: 300%;
+
+      width: 330px;
+      height: 385px;
+
+      li:last-child {
+        background-color: rgb(251, 214, 0);
+        &:hover {
+          background-color: rgba(251, 214, 0, 0.5);
+        }
+        a {
+          font-size: 15px;
+          line-height: 25px;
+
+          letter-spacing: -0.1px;
+          text-transform: uppercase;
+
+          color: #24303e;
+        }
+      }
+    }
+
+    nav button.burger {
+      display: block;
+    }
+  }
+
+  section.about {
+    article {
+      flex-direction: column;
+    }
+    .bg-yellow {
+      order: -1;
+    }
+  }
+  section.projects {
+    div {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    nav.open ul.fbx {
+      width: 100%;
     }
   }
 }

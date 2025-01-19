@@ -29,7 +29,8 @@
   <header>
     <div class="fbx">
       <img src="./images/logo.svg" width="170px" height="33px" alt="Logo company - sunnyside">
-      <nav>
+      <nav class="open">
+        <button class="burger"><span></span></button>
         <ul class="fbx">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -138,10 +139,14 @@
 
   <footer class="container" id="projects">
     <section class="projects">
-      <div><img src="./images/desktop/image-gallery-milkbottles.jpg" alt="img of a milkbottles"></div>
-      <div><img src="./images/desktop/image-gallery-orange.jpg" alt="imf of a orange"></div>
-      <div><img src="./images/desktop/image-gallery-cone.jpg" alt="img of a cone"></div>
-      <div><img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="img of a sugarcubes"></div>
+      <div>
+        <div><img src="./images/desktop/image-gallery-milkbottles.jpg" alt="img of a milkbottles"></div>
+        <div><img src="./images/desktop/image-gallery-orange.jpg" alt="imf of a orange"></div>
+      </div>
+      <div>
+        <div><img src="./images/desktop/image-gallery-cone.jpg" alt="img of a cone"></div>
+        <div><img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="img of a sugarcubes"></div>
+      </div>
     </section>
 
     <section class="contacts">
@@ -187,6 +192,15 @@
       </div>
     </section>
   </footer>
+
+  <script>
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+
+    burger.addEventListener("click", () => {
+      nav.classList.toggle('open');
+    })
+  </script>
 </body>
 
 </html>
