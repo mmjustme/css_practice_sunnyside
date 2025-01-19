@@ -411,6 +411,9 @@ footer {
 
 @media (max-width: 1200px) {
   header {
+    h1 {
+      text-align: center;
+    }
     img {
       width: 123px;
       height: 24px;
@@ -503,8 +506,35 @@ footer {
 
 @media (max-width: 700px) {
   header {
+    h1 {
+      text-align: center;
+      font-size: 40px;
+    }
     nav.open ul.fbx {
       width: 100%;
     }
+  }
+
+  section.about {
+    article div.info {
+      text-align: center;
+      padding: 64px 24px;
+      h2 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  main section.testimonials {
+    padding-inline: 24px;
+    padding-block: 64px;
+  }
+
+  footer section.projects div {
+    flex-basis: 260px;
+  }
+
+  footer section.contacts ul {
+    gap: 20px;
   }
 }
